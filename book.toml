@@ -1,0 +1,55 @@
+[book]
+authors = ["Sandwich Station"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Sandwich Station Wiki"
+description = "Crew wiki for Sandwich Station"
+
+[preprocessor.mermaid]
+
+[preprocessor.admonish]
+assets_version = "3.0.1" # do not edit: managed by `mdbook-admonish install`
+command = "mdbook-admonish"
+
+[preprocessor.emojicodes]
+
+[preprocessor.template]
+before = ["mermaid","admonish","emojicodes"] # templates can include these so we run this first
+
+[preprocessor.embedify]
+
+[output.html]
+additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/nav-additions.js']
+additional-css = ['theme/compiled/ss14.css']
+default-theme = "navy"
+preferred-dark-theme = "navy"
+
+git-repository-url = "https://github.com/SandwichStation/SandwichStation"
+edit-url-template = "https://github.com/SandwichStation/wiki/blob/main/{path}"
+
+mathjax-support = true
+curly-quotes = true
+no-section-label = true
+
+[output.html.print]
+enable = false
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.playground]
+runnable = false
+
+[output.linkcheck]
+traverse-parent-directories = false
+warning-policy = "ignore" # Warnings break the action, no reason to do that, so disabled...
+
+# Redirects
+# These are used to map between old Wiki.js links and current docs site links,
+# so we can avoid the hell that was dead links with the old hackmd transfer.
+# Wiki.js doesn't have `.html` endings on files, so we hack it by putting /index.html
+# and just letting the browser look there, then get redirected
+[output.html.redirect]
+#Example: "/en/getting-started/how-do-i-code/index.html" = "/en/general-development/setup/howdoicode.html"
