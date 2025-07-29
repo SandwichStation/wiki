@@ -1,6 +1,6 @@
 # Sandwich Station Wiki
 
-[The wiki is currently live on this url](https://wiki.b3ckdoor.com).
+[The wiki is currently live on this url](https://wiki.sandwich14.com).
 
 ## License and credit
 
